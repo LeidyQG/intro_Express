@@ -20,6 +20,18 @@ router.get(
     }
 )
 
+router.get(
+    '/aleatorio',
+    (req:Request, res:Response)=>{
+        const min = 1;
+        const max = 100000;
+        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(randomNumber);
+        res.send(randomNumber.toString())
+    }
+)
+
+
 
 
 
